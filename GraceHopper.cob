@@ -1,8 +1,9 @@
 identification division.
 program-id. GraceHopper.
-author. Sean McBride.
+author.     Sean McBride.
 
 procedure division.
+
 display "                     __..````..__                      ".
 display "                 ._--```   ,.   ```--_.                 ".
 display "               //``      << `)      ``\\               ".

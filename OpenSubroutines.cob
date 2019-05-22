@@ -1,8 +1,9 @@
-IDENTIFICATION DIVISION.
-PROGRAM-ID.  OpenSubroutines.
-AUTHOR.  Sean McBride.
+identification division.
+program-id.   OpenSubroutines.
+author.       Sean McBride.
 
-PROCEDURE DIVISION.
+procedure division.
+
 *> Open Subroutines are really just syntactic sugar around labeled GOTOs
 *> That means that the subroutines are all within the same scope
 *> and the thread of execution ignores the label and just runs from top
@@ -10,26 +11,27 @@ PROCEDURE DIVISION.
 *> at the top of the procedure division and putting a STOP RUN at the end
 *> of the Main subroutine.
 *> There are no parameters. Subroutines mutate centralized shared state
+
 Main.
-    DISPLAY "In TopLevel. Starting to run program"
-    PERFORM DoFirstThing
-    DISPLAY "Back in TopLevel.".
-    *> If we don't STOP RUN here, we fall back through the other function
-    *> blocks
-    STOP RUN.
+  display "In TopLevel. Starting to run program"
+  perform DoFirstThing
+  display "Back in TopLevel.".
+  *> If we don't STOP RUN here, we fall back through the other function
+  *> blocks
+  STOP RUN.
 
 
 DoSecondThing.
-    DISPLAY ">>>>>>>> Now in DoSecondThing."
-    PERFORM DoThirdThing.
-    DISPLAY ">>>>>>>> Back in DoSecondThing.".
+  display ">>>>>>>> Now in DoSecondThing."
+  perform DoThirdThing.
+  display ">>>>>>>> Back in DoSecondThing.".
 
 
 DoFirstThing.
-    DISPLAY ">>>> Now in DoFirstThing"
-    PERFORM DoSecondThing
-    DISPLAY ">>>> Back in DoFirstThing".
+  display ">>>> Now in DoFirstThing"
+  perform DoSecondThing
+  display ">>>> Back in DoFirstThing".
 
 
 DoThirdThing.
-    DISPLAY ">>>>>>>>>>>> Now in DoThirdThing".
+  display ">>>>>>>>>>>> Now in DoThirdThing".

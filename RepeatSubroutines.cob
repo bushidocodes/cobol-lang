@@ -1,22 +1,24 @@
-IDENTIFICATION DIVISION.
-PROGRAM-ID.  InLineVsOutOfLine.
-AUTHOR.  Sean McBride.
+identification division.
+program-id.   InLineVsOutOfLine.
+author.       Sean McBride.
 
-DATA DIVISION.
-WORKING-STORAGE SECTION.
-01 NumOfTimes           PIC 9 VALUE 5.
+data division.
+working-storage section.
 
-PROCEDURE DIVISION.
+01 NumOfTimes           pic 9 value 5.
+
+procedure division.
+
 Begin.
-    DISPLAY "Starting to run program"
-    PERFORM 3 TIMES
-       DISPLAY ">>>>This is an in line Perform"
-    END-PERFORM
-    DISPLAY "Finished in line Perform"
-    *> Executing a subroutine a set number of times
-    PERFORM OutOfLineEG NumOfTimes TIMES
-    DISPLAY "Back in Begin. About to Stop".
-    STOP RUN.
+  display "Starting to run program"
+  perform 3 times
+    display ">>>>This is an in line Perform"
+  end-perform
+  display "Finished in line Perform"
+  *> Executing a subroutine a set number of times
+  perform OutOfLineEG NumOfTimes TIMES
+  display "Back in Begin. About to Stop".
+  stop run.
 
 OutOfLineEG.
-    DISPLAY ">>>> This is an out of line Perform".
+  display ">>>> This is an out of line Perform".
