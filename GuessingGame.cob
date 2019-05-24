@@ -5,10 +5,10 @@ author.     Sean McBride.
 data division.
 working-storage section.
 
-01 actualNumber            pic  9 value  5.
-01 userGuess               pic  9 value  0.
+01 actualNumber            pic 9 usage computational value is 5.
+01 userGuess               pic 9 usage computational value is 0.
   88 validGuess            value '1' '2' '3' '4' '5' '6' '7' '8' '9'.
-01 numberOfGuesses         pic 99 value 00.
+01 numberOfGuesses         pic 99 usage computational value is 00.
 
 procedure division.
 
