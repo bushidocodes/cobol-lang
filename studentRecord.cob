@@ -6,40 +6,39 @@ data division.
 working-storage section.
 
 01 StudentDetails.
-  02  StudentId       PIC 9(7).
+  02  StudentId    pic 9(7).
   02  StudentName.
-    03 Surname      PIC X(8).
-    03 Initials     PIC XX.
-  02  CourseCode      PIC X(4).
-  02  Gender          PIC X.
+    03 Surname     pic x(8).
+    03 Initials    pic xx.
+  02  CourseCode   pic x(4).
+  02  Gender       pic x.
 
 01 CurrentDate.
-  02  CurrentYear     PIC 9(4).
-  02  CurrentMonth    PIC 99.
-  02  CurrentDay      PIC 99.
+  02  CurrentYear  pic 9(4).
+  02  CurrentMonth pic 99.
+  02  CurrentDay   pic 99.
 
 01 DayOfYear.
-  02  FILLER          PIC 9(4).
-  02  YearDay         PIC 9(3).
+  02  filler       pic 9(4).
+  02  YearDay      pic 9(3).
 
 01 CurrentTime.
-  02  CurrentHour     PIC 99.
-  02  CurrentMinute   PIC 99.
-  02  FILLER          PIC 9(4).
+  02  CurrentHour   pic 99.
+  02  CurrentMinute pic 99.
+  02  filler        pic 9(4).
 
 procedure division.
 
-display "Enter student details using template below".
-display "Enter - ID,Surname,Initials,CourseCode,Gender"
-display "SSSSSSSNNNNNNNNIICCCCG".
-accept  StudentDetails.
-accept  CurrentDate from date YYYYMMDD.
-accept  DayOfYear from day YYYYDDD.
-accept  CurrentTime from time.
-display "Name is ", Initials space Surname.
-
-display "Name 2 ", StudentName.
-display "Date is " CurrentDay space CurrentMonth space CurrentYear.
-display "Today is day " YearDay " of the year".
-display "The time is " CurrentHour ":" CurrentMinute.
-stop run.
+    display "Enter student details using template below".
+    display "Enter - ID,Surname,Initials,CourseCode,Gender".
+    display "SSSSSSSNNNNNNNNIICCCCG".
+    accept  StudentDetails.
+    accept  CurrentDate from date yyyymmdd.
+    accept  DayOfYear from day yyyyddd.
+    accept  CurrentTime from time.
+    display "Name is ", Initials space Surname.
+    display "Name 2 ", StudentName.
+    display "Date is " CurrentDay space CurrentMonth space CurrentYear.
+    display "Today is day " YearDay " of the year".
+    display "The time is " CurrentHour ":" CurrentMinute.
+    stop run.

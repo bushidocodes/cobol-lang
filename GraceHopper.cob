@@ -34,3 +34,4 @@ display "         \\           //        \\           //         ".
 display "          `,=========`            `=========,`          ".
 display "                                                        ".
 display "                                                        ".
+stop run.
