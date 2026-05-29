@@ -7,7 +7,7 @@ This repo was built researching the COBOL language while writing [this blog post
 Install GnuCOBOL on a Debian-based system:
 
 ```sh
-sudo apt-get install open-cobol
+sudo apt-get install gnucobol
 ```
 
 Compile and run a free-form source file:
