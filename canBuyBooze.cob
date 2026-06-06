@@ -15,6 +15,6 @@ procedure division.
     if CustomerAge greater than or equal to RequiredAge then
         display "Purchase allowed"
     else
-        display "Purchase forbidden!"
+        display "Purchase forbidden"
     end-if.
     stop run.

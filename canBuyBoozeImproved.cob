@@ -17,6 +17,6 @@ procedure division.
     if Adult then
         display "Purchase allowed"
     else
-        display "Purchase forbidden!"
+        display "Purchase forbidden"
     end-if.
     stop run.
