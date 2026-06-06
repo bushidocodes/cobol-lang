@@ -1,4 +1,3 @@
-SHELL  := bash
 COBC   := cobc
 
 PROGRAMS := \
