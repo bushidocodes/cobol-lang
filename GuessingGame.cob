@@ -5,14 +5,20 @@ author.     Sean McBride.
 data division.
 working-storage section.
 
-01 actualNumber    pic 9  usage computational value is 5.
+01 actualNumber    pic 9  usage computational value is 0.
 01 userGuess       pic 9  usage computational value is 0.
   88 validGuess    value 1 thru 9.
 01 numberOfGuesses pic 99 usage computational value is 00.
+01 currentTime     pic x(21).
+01 timeSeed        pic 9(8).
 
 procedure division.
 
 StartRun.
+    move function current-date to currentTime
+    move currentTime(9:8) to timeSeed
+    compute actualNumber =
+        function integer(function random(timeSeed) * 9) + 1
     perform GetGuess until userGuess is equal to actualNumber.
     display "Got it in " numberOfGuesses " guesses".
     stop run.
