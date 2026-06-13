@@ -1,5 +1,8 @@
 COBC   := cobc
 WARN   := -Wall -Wextra -Wcolumn-overflow -Wtruncate -Wunreachable
+# Extra compiler flags, empty by default. CI overrides this to build with
+# C-level hardening (e.g. HARDEN='-O2 -A "-D_FORTIFY_SOURCE=2 ..."').
+HARDEN :=
 
 PROGRAMS := \
 	FreeCobol.exe         \
@@ -24,10 +27,10 @@ build: $(PROGRAMS)
 	@echo "Build complete."
 
 %.exe: %.cob
-	$(COBC) -x -free $(WARN) -o $@ $<
+	$(COBC) -x -free $(WARN) $(HARDEN) -o $@ $<
 
 StructuredCobol.exe: StructuredCobol.cob
-	$(COBC) -x -fixed $(WARN) -o $@ $<
+	$(COBC) -x -fixed $(WARN) $(HARDEN) -o $@ $<
 
 # ── Tests ─────────────────────────────────────────────────────────────────────
 #  Each rule pipes test input (where needed) and asserts on expected output.
