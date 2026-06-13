@@ -1,6 +1,6 @@
 identification division.
 program-id. CanBuyBoozeImproved.
-author.     Sean McBride.
+*> Author: Sean McBride
 
 data division.
 working-storage section.
@@ -12,11 +12,11 @@ working-storage section.
 
 procedure division.
 
-    display "Enter customer age: ".
-    accept CustomerAge.
+    display "Enter customer age: " end-display.
+    accept CustomerAge end-accept.
     if Adult then
-        display "Purchase allowed"
+        display "Purchase allowed" end-display
     else
-        display "Purchase forbidden"
+        display "Purchase forbidden" end-display
     end-if.
     stop run.

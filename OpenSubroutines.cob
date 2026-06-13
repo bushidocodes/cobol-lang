@@ -1,6 +1,6 @@
 identification division.
 program-id.   OpenSubroutines.
-author.       Sean McBride.
+*> Author: Sean McBride
 
 procedure division.
 
@@ -13,25 +13,25 @@ procedure division.
 *> There are no parameters. Subroutines mutate centralized shared state
 
 Main.
-  display "In TopLevel. Starting to run program"
+  display "In TopLevel. Starting to run program" end-display
   perform DoFirstThing
-  display "Back in TopLevel.".
+  display "Back in TopLevel." end-display.
   *> If we don't STOP RUN here, we fall back through the other function
   *> blocks
   STOP RUN.
 
 
 DoSecondThing.
-  display ">>>>>>>> Now in DoSecondThing."
+  display ">>>>>>>> Now in DoSecondThing." end-display
   perform DoThirdThing.
-  display ">>>>>>>> Back in DoSecondThing.".
+  display ">>>>>>>> Back in DoSecondThing." end-display.
 
 
 DoFirstThing.
-  display ">>>> Now in DoFirstThing"
+  display ">>>> Now in DoFirstThing" end-display
   perform DoSecondThing
-  display ">>>> Back in DoFirstThing".
+  display ">>>> Back in DoFirstThing" end-display.
 
 
 DoThirdThing.
-  display ">>>>>>>>>>>> Now in DoThirdThing".
+  display ">>>>>>>>>>>> Now in DoThirdThing" end-display.

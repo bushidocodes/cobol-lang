@@ -10,10 +10,10 @@ working-storage section.
 
 procedure division.
 
-    display "Enter first number: ".
-    accept Num1.
-    display "Enter second number: ".
-    accept Num2.
-    multiply Num1 by Num2 giving Result.
-    display "Result is = ", Result.
+    display "Enter first number: " end-display.
+    accept Num1 end-accept.
+    display "Enter second number: " end-display.
+    accept Num2 end-accept.
+    multiply Num1 by Num2 giving Result end-multiply.
+    display "Result is = ", Result end-display.
     stop run.

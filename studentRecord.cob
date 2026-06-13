@@ -1,6 +1,6 @@
 identification division.
 program-id.   StudentRecord.
-author.       Sean McBride.
+*> Author: Sean McBride
 
 data division.
 working-storage section.
@@ -29,16 +29,16 @@ working-storage section.
 
 procedure division.
 
-    display "Enter student details using template below".
-    display "Enter - ID,Surname,Initials,CourseCode,Gender".
-    display "SSSSSSSNNNNNNNNIICCCCG".
-    accept  StudentDetails.
-    accept  CurrentDate from date yyyymmdd.
-    accept  DayOfYear from day yyyyddd.
-    accept  CurrentTime from time.
-    display "Name is ", Initials space Surname.
-    display "Name 2 ", StudentName.
-    display "Date is " CurrentDay space CurrentMonth space CurrentYear.
-    display "Today is day " YearDay " of the year".
-    display "The time is " CurrentHour ":" CurrentMinute.
+    display "Enter student details using template below" end-display.
+    display "Enter - ID,Surname,Initials,CourseCode,Gender" end-display.
+    display "SSSSSSSNNNNNNNNIICCCCG" end-display.
+    accept  StudentDetails end-accept.
+    accept  CurrentDate from date yyyymmdd end-accept.
+    accept  DayOfYear from day yyyyddd end-accept.
+    accept  CurrentTime from time end-accept.
+    display "Name is ", Initials space Surname end-display.
+    display "Name 2 ", StudentName end-display.
+    display "Date is " CurrentDay space CurrentMonth space CurrentYear end-display.
+    display "Today is day " YearDay " of the year" end-display.
+    display "The time is " CurrentHour ":" CurrentMinute end-display.
     stop run.
