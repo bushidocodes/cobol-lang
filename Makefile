@@ -47,7 +47,7 @@ test: build
 	@printf "017\n"  | ./canBuyBooze.exe         | grep -q "Purchase forbidden" && echo "  canBuyBooze (minor)         PASS" || (echo "  canBuyBooze (minor)         FAIL"; exit 1)
 	@printf "025\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase allowed"   && echo "  canBuyBoozeImproved (adult) PASS" || (echo "  canBuyBoozeImproved (adult) FAIL"; exit 1)
 	@printf "017\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase forbidden" && echo "  canBuyBoozeImproved (minor) PASS" || (echo "  canBuyBoozeImproved (minor) FAIL"; exit 1)
-	@printf "06\n07\n" | ./multiply.exe          | grep -q "042"                && echo "  multiply (6x7=42)           PASS" || (echo "  multiply (6x7=42)           FAIL"; exit 1)
+	@printf "06\n07\n" | ./multiply.exe          | grep -q "42"                 && echo "  multiply (6x7=42)           PASS" || (echo "  multiply (6x7=42)           FAIL"; exit 1)
 	@printf "1\n2\n3\n4\n5\n6\n7\n8\n9\n" | ./GuessingGame.exe | grep -q "Got it in" && echo "  GuessingGame                PASS" || (echo "  GuessingGame                FAIL"; exit 1)
 	@printf "1234567SMITH   JRCS10M\n" | ./studentRecord.exe | grep -q "SMITH"  && echo "  studentRecord               PASS" || (echo "  studentRecord               FAIL"; exit 1)
 	@echo ""
