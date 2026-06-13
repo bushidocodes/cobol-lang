@@ -1,0 +1,22 @@
+root = true
+
+# This repo is authored on Windows; all tracked files use CRLF.
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# Makefile recipes MUST be indented with hard tabs.
+[Makefile]
+indent_style = tab
+
+# YAML conventionally uses 2-space indentation.
+[*.yml]
+indent_size = 2
+
+# StructuredCobol.cob is fixed-format COBOL: the program-text area
+# (columns 1-72) is column-sensitive, so leave its whitespace alone.
+[StructuredCobol.cob]
+trim_trailing_whitespace = false
