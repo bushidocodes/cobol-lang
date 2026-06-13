@@ -45,10 +45,15 @@ test: build
 	@echo "Interactive programs:"
 	@printf "025\n"  | ./canBuyBooze.exe         | grep -q "Purchase allowed"   && echo "  canBuyBooze (adult)         PASS" || (echo "  canBuyBooze (adult)         FAIL"; exit 1)
 	@printf "017\n"  | ./canBuyBooze.exe         | grep -q "Purchase forbidden" && echo "  canBuyBooze (minor)         PASS" || (echo "  canBuyBooze (minor)         FAIL"; exit 1)
+	@printf "020\n"  | ./canBuyBooze.exe         | grep -q "Purchase forbidden" && echo "  canBuyBooze (age 20)        PASS" || (echo "  canBuyBooze (age 20)        FAIL"; exit 1)
+	@printf "021\n"  | ./canBuyBooze.exe         | grep -q "Purchase allowed"   && echo "  canBuyBooze (age 21)        PASS" || (echo "  canBuyBooze (age 21)        FAIL"; exit 1)
 	@printf "025\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase allowed"   && echo "  canBuyBoozeImproved (adult) PASS" || (echo "  canBuyBoozeImproved (adult) FAIL"; exit 1)
 	@printf "017\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase forbidden" && echo "  canBuyBoozeImproved (minor) PASS" || (echo "  canBuyBoozeImproved (minor) FAIL"; exit 1)
+	@printf "020\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase forbidden" && echo "  canBuyBoozeImproved (age 20) PASS" || (echo "  canBuyBoozeImproved (age 20) FAIL"; exit 1)
+	@printf "021\n"  | ./canBuyBoozeImproved.exe | grep -q "Purchase allowed"   && echo "  canBuyBoozeImproved (age 21) PASS" || (echo "  canBuyBoozeImproved (age 21) FAIL"; exit 1)
 	@printf "06\n07\n" | ./multiply.exe          | grep -q "42"                 && echo "  multiply (6x7=42)           PASS" || (echo "  multiply (6x7=42)           FAIL"; exit 1)
 	@printf "1\n2\n3\n4\n5\n6\n7\n8\n9\n" | ./GuessingGame.exe | grep -q "Got it in" && echo "  GuessingGame                PASS" || (echo "  GuessingGame                FAIL"; exit 1)
+	@printf "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n" | ./GuessingGame.exe | grep -q "This was not a number" && echo "  GuessingGame (invalid input) PASS" || (echo "  GuessingGame (invalid input) FAIL"; exit 1)
 	@printf "1234567SMITH   JRCS10M\n" | ./studentRecord.exe | grep -q "SMITH"  && echo "  studentRecord               PASS" || (echo "  studentRecord               FAIL"; exit 1)
 	@echo ""
 	@echo "All tests passed."
