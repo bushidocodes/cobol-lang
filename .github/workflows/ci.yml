@@ -19,3 +19,11 @@ jobs:
 
       - name: Run tests
         run: make test
+
+      # Regression gate: the tree is warning-free, so promote warnings to
+      # errors in CI to keep it that way. Kept out of the default Makefile
+      # build so local experimentation isn't blocked by warnings.
+      - name: Build with -Werror (warning regression gate)
+        run: |
+          make clean
+          make build WARN="-Wall -Wextra -Wcolumn-overflow -Wtruncate -Wunreachable -Werror"
