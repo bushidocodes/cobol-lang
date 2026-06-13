@@ -27,3 +27,11 @@ jobs:
         run: |
           make clean
           make build WARN="-Wall -Wextra -Wcolumn-overflow -Wtruncate -Wunreachable -Werror"
+
+      # Build once more with C-level hardening to mirror grok-cobol-game.
+      # Passed via cobc's -A (C compile options); -O2 makes _FORTIFY_SOURCE
+      # effective. CI-only, so the default `make build` stays simple.
+      - name: Build with hardening flags
+        run: |
+          make clean
+          make build HARDEN='-O2 -A "-D_FORTIFY_SOURCE=2 -fstack-protector-strong -Wformat -Wformat-security"'
