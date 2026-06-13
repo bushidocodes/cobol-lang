@@ -1,37 +1,37 @@
 identification division.
 program-id. GraceHopper.
-author.     Sean McBride.
+*> Author: Sean McBride
 
 procedure division.
 
-display "                     __..````..__                      ".
-display "                 ._--```   ,.   ```--_.                 ".
-display "               //``      << `)      ``\\               ".
-display "              ..    ..--../  \..--..   ..              ".
-display "              ||   /``-\__    __/-``\  ||              ".
-display "        .---  ||  *   ____\__/____  *  ||   ---.       ".
-display "      /`      ||    `==============`   ||       `\     ".
-display "    ./        ||    |==============|   ||         \.   ".
-display " ,  |   ,=====||    |     NAVY     |   ||=====,    |  ,".
-display " /\,,, //\\\\\||     \     **     /    ||//////\\ ,,,/\".
-display "|/////---,,\\\||      \,.______,./     ||///,,---\\\\\\|".
-display "|//////////;..__     ++_        _++    __..;\\\\\\\\\\\|".
-display "|///////////////``\      `----`     /``\\\\\\\\\\\\\\\\|".
-display "|///////////////////````..____..````\\\\\\\\\\\\\\\\\\\|".
-display "|///////////////.../////////\\\\\\\\...\\\\\\\\\\\\\\\\|".
-display "|/////////..--``                       ``--..\\\\\\\\\\|".
-display ".////../``                                    ``\..\\\\.".
-display "\///``                                            ``\\\/".
-display " \                                                    / ".
-display "                                                        ".
-display "       -----------------,      ,-----------------       ".
-display "     /\\\,.``````````````\____/ `````````````.,///\     ".
-display "     (\\/                \.--./                \//)     ".
-display "      /                  /    \                  \      ".
-display "       \\               //    \\               //       ".
-display "        \\             //      \\             //        ".
-display "         \\           //        \\           //         ".
-display "          `,=========`            `=========,`          ".
-display "                                                        ".
-display "                                                        ".
+display "                     __..````..__                      " end-display.
+display "                 ._--```   ,.   ```--_.                 " end-display.
+display "               //``      << `)      ``\\               " end-display.
+display "              ..    ..--../  \..--..   ..              " end-display.
+display "              ||   /``-\__    __/-``\  ||              " end-display.
+display "        .---  ||  *   ____\__/____  *  ||   ---.       " end-display.
+display "      /`      ||    `==============`   ||       `\     " end-display.
+display "    ./        ||    |==============|   ||         \.   " end-display.
+display " ,  |   ,=====||    |     NAVY     |   ||=====,    |  ," end-display.
+display " /\,,, //\\\\\||     \     **     /    ||//////\\ ,,,/\" end-display.
+display "|/////---,,\\\||      \,.______,./     ||///,,---\\\\\\|" end-display.
+display "|//////////;..__     ++_        _++    __..;\\\\\\\\\\\|" end-display.
+display "|///////////////``\      `----`     /``\\\\\\\\\\\\\\\\|" end-display.
+display "|///////////////////````..____..````\\\\\\\\\\\\\\\\\\\|" end-display.
+display "|///////////////.../////////\\\\\\\\...\\\\\\\\\\\\\\\\|" end-display.
+display "|/////////..--``                       ``--..\\\\\\\\\\|" end-display.
+display ".////../``                                    ``\..\\\\." end-display.
+display "\///``                                            ``\\\/" end-display.
+display " \                                                    / " end-display.
+display "                                                        " end-display.
+display "       -----------------,      ,-----------------       " end-display.
+display "     /\\\,.``````````````\____/ `````````````.,///\     " end-display.
+display "     (\\/                \.--./                \//)     " end-display.
+display "      /                  /    \                  \      " end-display.
+display "       \\               //    \\               //       " end-display.
+display "        \\             //      \\             //        " end-display.
+display "         \\           //        \\           //         " end-display.
+display "          `,=========`            `=========,`          " end-display.
+display "                                                        " end-display.
+display "                                                        " end-display.
 stop run.
