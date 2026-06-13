@@ -26,7 +26,7 @@ Use `-fixed` instead of `-free` for `StructuredCobol.cob`.
 | [StructuredCobol.cob](StructuredCobol.cob) | Traditional fixed-format with column numbers and continuation |
 | [canBuyBooze.cob](canBuyBooze.cob) | Working-storage, basic IF/ELSE conditional |
 | [canBuyBoozeImproved.cob](canBuyBoozeImproved.cob) | Level-88 condition names as named boolean values |
-| [multiply.cob](multiply.cob) | ACCEPT input, MULTIPLY arithmetic verb |
+| [multiply.cob](multiply.cob) | ACCEPT input, MULTIPLY arithmetic verb, edited PIC for output (zero suppression + comma insertion) |
 | [GuessingGame.cob](GuessingGame.cob) | Level-88 input validation, PERFORM UNTIL loop, paragraph calls |
 | [OpenSubroutines.cob](OpenSubroutines.cob) | Paragraphs as open subroutines, PERFORM, STOP RUN scoping |
 | [RepeatSubroutines.cob](RepeatSubroutines.cob) | Inline PERFORM N TIMES vs. out-of-line paragraph repeat |
