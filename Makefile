@@ -1,4 +1,5 @@
 COBC   := cobc
+WARN   := -Wall -Wextra -Wcolumn-overflow -Wtruncate -Wunreachable
 
 PROGRAMS := \
 	FreeCobol.exe         \
@@ -23,10 +24,10 @@ build: $(PROGRAMS)
 	@echo "Build complete."
 
 %.exe: %.cob
-	$(COBC) -x -free -o $@ $<
+	$(COBC) -x -free $(WARN) -o $@ $<
 
 StructuredCobol.exe: StructuredCobol.cob
-	$(COBC) -x -fixed -o $@ $<
+	$(COBC) -x -fixed $(WARN) -o $@ $<
 
 # ── Tests ─────────────────────────────────────────────────────────────────────
 #  Each rule pipes test input (where needed) and asserts on expected output.
